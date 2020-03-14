@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setTitle("Домашня");
+
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
@@ -34,15 +36,19 @@ public class MainActivity extends AppCompatActivity {
                     switch (item.getItemId()) {
                         case R.id.nav_home:
                             selectedFragment = new HomeFragment();
+                            setTitle("Домашня");
                             break;
                         case R.id.nav_favorites:
                             selectedFragment = new FavoritesFragment();
+                            setTitle("Улюблені");
                             break;
                         case R.id.nav_search:
                             selectedFragment = new SearchFragment();
+                            setTitle("Пошук");
                             break;
                         case R.id.nav_card:
                             selectedFragment = new CardFragment();
+                            setTitle("Карта");
                             break;
                     }
 
