@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new CardFragment();
                             setTitle("Карта");
                             break;
+                        case R.id.nav_cash:
+                            selectedFragment = new MoneyFragment();
+                            break;
                     }
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
